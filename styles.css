@@ -1,3 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 1s; /* Add transition for background color */
+}
+
 body.light-theme {
     background-color: #d3d3d3; /* Soft gray */
     color: #000000;
@@ -8,37 +19,10 @@ body.dark-theme {
     color: #ffffff;
 }
 
-.profile-picture img {
-    width: 150px;
-    border-radius: 50%;
-}
-
-.tabbar button {
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    transition: opacity 0.5s;
-}
-
-.section button {
-    display: block;
-    padding: 10px;
-    margin: 5px 0;
-    transition: opacity 0.5s;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Full viewport height */
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .profile-picture {
     margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .tabbar {
@@ -48,7 +32,11 @@ body {
 }
 
 .section button {
-    margin: 10px 0;
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 body.loaded .profile-picture,
@@ -67,6 +55,3 @@ body.loaded .section button {
         opacity: 1;
     }
 }
-
-
-
