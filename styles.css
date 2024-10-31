@@ -1,0 +1,26 @@
+body.light-theme {
+    background-color: #d3d3d3; /* Soft gray */
+    color: #000000;
+}
+
+body.dark-theme {
+    background-color: #000000; /* Black */
+    color: #ffffff;
+}
+
+.profile-picture img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.tabbar button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.section button {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+}
