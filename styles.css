@@ -17,12 +17,14 @@ body.dark-theme {
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
+    transition: opacity 0.5s;
 }
 
 .section button {
     display: block;
     padding: 10px;
     margin: 5px 0;
+    transition: opacity 0.5s;
 }
 
 body {
@@ -41,8 +43,30 @@ body {
 
 .tabbar {
     margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .section button {
     margin: 10px 0;
 }
+
+body.loaded .profile-picture,
+body.loaded .tabbar,
+body.loaded .section button {
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+

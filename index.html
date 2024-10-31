@@ -28,16 +28,43 @@
 
 <script>
   function showApps() {
-    document.getElementById('apps').style.display = 'block';
-    document.getElementById('music').style.display = 'none';
-    document.getElementById('body').className = 'light-theme';
+    var apps = document.getElementById('apps');
+    var music = document.getElementById('music');
+    var body = document.getElementById('body');
+
+    music.style.display = 'none';
+    apps.style.display = 'block';
+
+    body.className = 'light-theme loaded';
+
+    // Trigger reflow to restart animation
+    void apps.offsetWidth;
+    apps.classList.add('fade-in');
   }
 
   function showMusic() {
-    document.getElementById('apps').style.display = 'none';
-    document.getElementById('music').style.display = 'block';
-    document.getElementById('body').className = 'dark-theme';
+    var apps = document.getElementById('apps');
+    var music = document.getElementById('music');
+    var body = document.getElementById('body');
+
+    apps.style.display = 'none';
+    music.style.display = 'block';
+
+    body.className = 'dark-theme loaded';
+
+    // Trigger reflow to restart animation
+    void music.offsetWidth;
+    music.classList.add('fade-in');
   }
+
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    var sections = document.querySelectorAll('.section button');
+    sections.forEach(function(section) {
+      section.classList.add('fade-in');
+    });
+  });
 </script>
+
 </body>
 </html>
