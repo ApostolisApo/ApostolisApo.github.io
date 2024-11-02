@@ -15,7 +15,21 @@
   <button id="musicTab" onclick="showMusic()">Music</button>
 </div>
 <div id="content">
+  <div id="appsAbout" style="visibility: hidden">
+    <p>About
+    My name is Apostolos Apostolidis, but in case this sounds hard, you can just call me Tolis.
+
+    I have worked as a programmer since 2013 and as an iOS developer since 2017. Currently, I am employed by Etraveli Group and help develop their various iOS apps. Earlier, I have worked as a mobile developer for the consulting companies TietoEVRY and Semcon. I started my career at Talkamatic as a software designer with specialty in dialogue systems. Apart from mobile systems I have experience from backend design (mainly in Python) and web frontend design (JS + Angular).
+
+    At a personal level, I sell and maintain KnowTrail for iOS and watchOS and KnowDate for iOS. You can click on the links and download them on your iPhone and/or Apple Watch!
+
+    My academic background is linguistics and computational linguistics and has allowed me to have a more interdisciplinary approach to the art of creating applications and interfaces.
+
+    Above all, what drives and defines me is a will to create user-friendly and practical applications that allow the user to focus on the task and not on how to beat the interface.
+    </p>
+  </div>
   <div id="apps" class="section">
+    <button onclick="showAppsAbout()">About</button>
     <button>KnowTrail</button>
     <button>KnowTrail Apple Watch</button>
     <button>Poke Calc</button>
@@ -44,6 +58,11 @@
     // Trigger reflow to restart animation
     void apps.offsetWidth;
     apps.classList.add('fade-in');
+  }
+
+  function showAppsAbout() {
+    const about = document.getElementById("appsAbout")
+    about.style.visibility = "visible"
   }
 
   function showMusic() {
