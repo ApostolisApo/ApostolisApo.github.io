@@ -10,7 +10,7 @@ body {
 }
 
 body.light-theme {
-    background-color: #d3d3d3; /* Soft gray */
+    background-color: #666666; /* Soft gray */
     color: #000000;
 }
 
@@ -54,4 +54,13 @@ body.loaded .section button {
     to {
         opacity: 1;
     }
+}
+
+#content .section {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: row; /* Arranges items horizontally */
+}
+
+#content button {
+    margin-right: 10px; /* Adds some space between buttons */
 }
